@@ -17,9 +17,14 @@ namespace ConsoleApplication2
 
             LogHelper.Error(log, "This is error 1", 10);
 
-            LogHelper.FilterEventLogAppender(log, Level.Debug, Level.Info);
+            /*
+             
+                Single bug fix example:
+                LogHelper.FilterEventLogAppender(log, Level.Debug, Level.Info);
+            */
 
             LogHelper.Error(log, "This is error 2", 10);
+
 
             LogHelper.FilterLogger(log, Level.Error);
 
