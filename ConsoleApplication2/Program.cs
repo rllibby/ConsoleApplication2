@@ -15,8 +15,6 @@ namespace ConsoleApplication2
         {
             ILog log = LogManager.GetLogger(ComponentNames.PluginSage100);
 
-            LogHelper.Error(log, "This is error 1", 10);
-
             LogHelper.FilterEventLogAppender(log, Level.Debug, Level.Info);
 
             LogHelper.Error(log, "This is error 2", 10);
