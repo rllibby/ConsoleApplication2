@@ -31,16 +31,6 @@ namespace ConsoleApplication2
 
             LogHelper.Error(log, "This is error 3", 18, new Exception("This blows!"));
 
-
-            List<LoggingEvent> logEvents = LogHelper.GetEvents(ComponentNames.Plugin);
-
-            log4net.Layout.PatternLayout layout = new log4net.Layout.PatternLayout("%date{yyyy-MM-dd HH:mm:ss} %-5level [%c] [%message] %exception");
-
-            foreach (LoggingEvent e in logEvents)
-            {
-                Console.WriteLine(layout.Format(e));
-            }
-
             Console.ReadLine();
         }
     }
