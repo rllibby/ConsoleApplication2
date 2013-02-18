@@ -16,7 +16,7 @@ using log4net;
 [assembly: AssemblyCulture("")]
 
 // Log4net configuration setting
-[assembly: log4net.Config.XmlConfigurator(ConfigFile = "ConsoleApplication2.log4net", Watch = true)]
+[assembly: log4net.Config.XmlConfigurator(ConfigFile = "Nephos.Connector.log4net.config", Watch = true)]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

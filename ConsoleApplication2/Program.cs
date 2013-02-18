@@ -13,9 +13,7 @@ namespace ConsoleApplication2
     {
         static void Main(string[] args)
         {
-            ILog log = LogManager.GetLogger(ComponentNames.PluginSage100);
-
-            LogHelper.Error(log, "This is error 1", 10);
+            ILog log = LogManager.GetLogger(ComponentNames.Plugin);
 
             /*
              
@@ -34,19 +32,13 @@ namespace ConsoleApplication2
 
             LogHelper.Debug(log, "This is debug 2", 12);
 
-            LogHelper.FilterEventLogAppender(log, Level.Debug, Level.Fatal);
+            LogHelper.FilterEventLogAppender(log, Level.Warn, Level.Fatal);
 
-            LogHelper.Error(log, "This is error 3", 18, new Exception("This blows!"));
-
-
-            List<LoggingEvent> logEvents = LogHelper.GetEvents(ComponentNames.Plugin);
-
-            log4net.Layout.PatternLayout layout = new log4net.Layout.PatternLayout("%date{yyyy-MM-dd HH:mm:ss} %-5level [%c] [%message] %exception");
-
-            foreach (LoggingEvent e in logEvents)
-            {
-                Console.WriteLine(layout.Format(e));
-            }
+            LogHelper.Debug(log, "This is debug x", 18, new Exception("Testing"));
+            LogHelper.Info(log, "This is info x", 18, new Exception("Testing"));
+            LogHelper.Warn(log, "This is warn x", 18, new Exception("Testing"));
+            LogHelper.Error(log, "This is error x", 18, new Exception("Testing"));
+            LogHelper.Fatal(log, "This is fatal x", 18, new Exception("Testing"));
 
             Console.ReadLine();
         }

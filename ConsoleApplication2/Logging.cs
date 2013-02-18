@@ -35,13 +35,8 @@ namespace Nephos.Connector.Logging
         /* Entity names which map to the logger namespaces */
         public const string Base  = "Nephos.Connector";
         public const string Host = "Nephos.Connector.Host";
-        public const string UI = "Nephos.Connector.UI";
         public const string Cloud = "Nephos.Connector.Cloud";
-        public const string CloudSData = "Nephos.Connector.Cloud.SData";
         public const string Plugin = "Nephos.Connector.Plugin";
-        public const string PluginGeneric = "Nephos.Connector.Plugin.Generic";
-        public const string PluginSage100 = "Nephos.Connector.Plugin.Sage100";
-        public const string PluginSage300 = "Nephos.Connector.Plugin.Sage300";
     }
 
     /// <summary>
