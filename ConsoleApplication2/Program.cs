@@ -15,9 +15,14 @@ namespace ConsoleApplication2
         {
             ILog log = LogManager.GetLogger(ComponentNames.Plugin);
 
-            LogHelper.FilterEventLogAppender(log, Level.Debug, Level.Info);
+            /*
+             
+                Single bug fix example:
+                LogHelper.FilterEventLogAppender(log, Level.Debug, Level.Info);
+            */
 
             LogHelper.Error(log, "This is error 2", 10);
+
 
             LogHelper.FilterLogger(log, Level.Error);
 
